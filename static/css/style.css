@@ -18618,7 +18618,7 @@ html {
 }
 
 .home {
-  background: url("../images/banner-bg.svg");
+  background: url("../banner-bg.svg");
   background-repeat-y: no-repeat;
   background-position: 0 -50px;
   padding-top: 103px;
