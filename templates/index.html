@@ -440,28 +440,117 @@
 						<div class="col-sm-7" data-aos="fade-up" data-aos-offset="-500">
 							<h3 class="font-weight-medium text-dark mt-5 mt-lg-0">Contact us for anything!</h3>
 							<h5 class="text-dark mb-5">We are always looking to help you.</h5>
-							<form>
-								<div class="row">
-									<div class="col-sm-6">
-										<div class="form-group">
-											<input type="text" class="form-control" id="name" placeholder="Name*">
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="form-group">
-											<input type="email" class="form-control" id="mail" placeholder="Email*">
-										</div>
-									</div>
-									<div class="col-sm-12">
-										<div class="form-group">
-											<textarea name="message" id="message" class="form-control" placeholder="Message*" rows="5"></textarea>
-										</div>
-									</div>
-									<div class="col-sm-12">
-										<a href="#" class="btn btn-secondary">SEND</a>
-									</div>
-								</div>
-							</form>
+							<h1 class="title">
+ 
+</h1>
+
+
+
+
+ 
+  {% if success %}
+
+
+
+<div class="container p-4 my-3 bg-success text-white">
+ 
+  
+    <h3><center>
+Thank you for your message. We'll get back to you shortly.
+</center></h3>
+</div>
+
+
+
+
+
+    <p></p>
+ 
+  {% else %}
+
+
+<div class="container p-4 my-3 bg-warning text-white">
+ 
+  <h4><center>Queries  |  Suggestions  |  Complaints </center></h4>
+<br>
+<center>
+<h3><center>🚀FUNDING</center></h3></center>
+<br>
+<p><center>Please feel free to drop us a message.</center> </p>
+    <h3><center>
+ Send Us your message and we'll get back to you soon!
+</center></h3>
+</div>
+
+    {% for message in form.name.errors %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+ 
+    {% for message in form.email.errors %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+ 
+    {% for message in form.subject.errors %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+ 
+    {% for message in form.message.errors %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+ 
+    <form action="{{ url_for('main.Contact_Us') }}" method=post>
+      {{ form.hidden_tag() }}
+ 
+<center>      {{ form.name.label }}
+      {{ form.name }}
+ </center> 
+  
+  
+ <br></br>
+
+
+
+<center>      {{ form.email.label }}
+      {{ form.email }}
+ </center> 
+  
+  
+ <br></br>
+
+
+
+<center>      {{ form.subject.label }}
+      {{ form.subject }}
+  </center>
+  
+  
+  
+  
+ <br></br>
+
+
+
+
+<center>      {{ form.message.label }}
+      {{ form.message }}
+  </center>
+  
+  
+  
+
+<div class="container  bg-info text-white">
+   <h3><center>
+   
+  {{ form.submit }}
+    </form>
+</center></h3>
+</div>
+</div>
+</div>
+
+<br>
+
+  {% endif %}
 						</div>
 					</div>
 				</div>
