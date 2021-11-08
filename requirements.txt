@@ -9,3 +9,4 @@ gunicorn
 WTForms
 flask-mail
 Flask-WTF
+email_validator
