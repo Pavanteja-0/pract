@@ -14,7 +14,7 @@ def create_app():
     app.config["MAIL_PORT"] = 465
     app.config["MAIL_USE_SSL"] = True
     app.config["MAIL_USERNAME"] = 'pavanteja14@gmail.com'
-    app.config["MAIL_PASSWORD"] = 'abyqaklzhesxzrmi'
+    app.config["MAIL_PASSWORD"] = 'fuckme@10PM'
     mail.init_app(app)
     
     
