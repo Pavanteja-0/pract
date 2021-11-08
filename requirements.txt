@@ -8,3 +8,4 @@ Werkzeug==2.0.2
 gunicorn
 WTForms
 flask-mail
+Flask-WTF
