@@ -127,7 +127,7 @@
 		//Team Members
 
 		//counter blog post
-		var maxbPVal = 80+;
+		var maxbPVal = 80;
 		var ibP = parseInt($('.bPVal').text());
 		var timbP;
 		function runbP() {
