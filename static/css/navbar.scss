@@ -1,7 +1,7 @@
 .navbar {
 	width: 100%;
 	padding: 1.875rem 1rem;
-	background: theme-color(light);
+	background: theme-color(lightgrey);
 	@media (max-width: 991px) {
 		padding: .875rem 1rem;
 		height: $mobile-header-height;
