@@ -10,3 +10,6 @@ WTForms
 flask-mail
 Flask-WTF
 email_validator
+Flask-SQLAlchemy
+SQLAlchemy
+psycopg2
